@@ -1,0 +1,6 @@
+FROM dockerfile/java:oracle-java8
+
+ADD jagu.alma.jar /opt/jagu.alma/
+EXPOSE 8080
+WORKDIR /opt/jagu.alma/
+CMD ["java", "-Xms512m", "-Xmx1g", "-jar", "jagu.alma.jar"]
